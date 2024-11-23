@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\File;
     public function getCountry()
     {
         $countries = json_decode(File::get(database_path('json/countries.json')), true)['countries'];
-        return view('Frontend.Pages.getcountry', compact('countries'));
+        return view('Frontend.Pages.getCountryStateCity', compact('countries'));
     }
 
 
